@@ -54,6 +54,11 @@ import Kanban from "layouts/applications/kanban";
 import Wizard from "layouts/applications/wizard";
 import DataTables from "layouts/applications/data-tables";
 import Currencies from "layouts/catalog/currencies";
+import Checkout from "layouts/catalog/checkout";
+import Products from "layouts/catalog/products";
+import Plans from "layouts/catalog/plans";
+import Invoices from "layouts/catalog/invoices";
+import Resellers from "layouts/catalog/resellers";
 import Calendar from "layouts/applications/calendar";
 import NewProduct from "layouts/ecommerce/products/new-product";
 import EditProduct from "layouts/ecommerce/products/edit-product";
@@ -123,32 +128,37 @@ const routes = [
         name: "Currencies",
         key: "currencies",
         route: "/catalog/currencies",
-        component: <Currencies />,
+        component: <Currencies />
       },
       {
         name: "Products",
         key: "products",
         route: "/catalog/products",
+        component: <Products />
       },
       {
         name: "Plans",
         key: "plans",
         route: "/catalog/plans",
+        component: <Plans />
       },
       {
         name: "Invoice Templates",
         key: "invoice-templates",
         route: "/catalog/invoice-templates",
+        component: <Invoices />
       },
       {
         name: "Checkout",
         key: "checkout",
         route: "/catalog/checkout",
+        component: <Checkout />
       },
       {
         name: "Resellers",
         key: "resellers",
         route: "/catalog/resellers",
+        component: <Resellers />
       },
     ],
   },
