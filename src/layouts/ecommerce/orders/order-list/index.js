@@ -68,22 +68,12 @@ function OrderList() {
       <DashboardNavbar />
       <MDBox my={3}>
         <MDBox display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
+          <MDTypography variant="h3" fontWeight="medium">
+            Currencies
+          </MDTypography>
           <MDButton variant="gradient" color="info">
-            new order
+            Add Customer
           </MDButton>
-          <MDBox display="flex">
-            <MDButton variant={menu ? "contained" : "outlined"} color="dark" onClick={openMenu}>
-              filters&nbsp;
-              <Icon>keyboard_arrow_down</Icon>
-            </MDButton>
-            {renderMenu}
-            <MDBox ml={1}>
-              <MDButton variant="outlined" color="dark">
-                <Icon>description</Icon>
-                &nbsp;export csv
-              </MDButton>
-            </MDBox>
-          </MDBox>
         </MDBox>
         <Card>
           <DataTable table={dataTableData} entriesPerPage={false} canSearch />
