@@ -17,95 +17,89 @@ import { useState } from "react";
 
 // @mui material components
 import Card from "@mui/material/Card";
+import Link from "@mui/material/Link";
 import Switch from "@mui/material/Switch";
 
 // Material Dashboard 2 PRO React components
 import MDBox from "components/MDBox";
+import MDInput from "components/MDInput";
+import MDButton from "components/MDButton";
 import MDTypography from "components/MDTypography";
 
 function PlatformSettings() {
-  const [followsMe, setFollowsMe] = useState(true);
-  const [answersPost, setAnswersPost] = useState(false);
-  const [mentionsMe, setMentionsMe] = useState(true);
-  const [newLaunches, setNewLaunches] = useState(false);
-  const [productUpdate, setProductUpdate] = useState(true);
-  const [newsletter, setNewsletter] = useState(false);
+  const [legalInfo, setLegalInfo] = useState(false);
+  const [showLogo, setShowLogo] = useState(false);
+  const [customTitle, setCustomTitle] = useState(true);
+  const [autocomplete, setAutocomplete] = useState(false);
+  const [allowCoupons, setAllowCoupons] = useState(false);
 
   return (
     <Card sx={{ boxShadow: "none" }}>
-      <MDBox p={2}>
-        <MDTypography variant="h6" fontWeight="medium" textTransform="capitalize">
-          platform settings
-        </MDTypography>
-      </MDBox>
       <MDBox pt={1} pb={2} px={2} lineHeight={1.25}>
-        <MDTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
-          account
-        </MDTypography>
         <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
-          <MDBox mt={0.5}>
-            <Switch checked={followsMe} onChange={() => setFollowsMe(!followsMe)} />
-          </MDBox>
           <MDBox width="80%" ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">
-              Email me when someone follows me
+              Show legal information
             </MDTypography>
+          </MDBox>
+          <MDBox mt={0.5}>
+            <Switch checked={legalInfo} onChange={() => setLegalInfo(!legalInfo)} />
           </MDBox>
         </MDBox>
         <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
-          <MDBox mt={0.5}>
-            <Switch checked={answersPost} onChange={() => setAnswersPost(!answersPost)} />
-          </MDBox>
           <MDBox width="80%" ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">
-              Email me when someone answers on my post
+              Show you logo
             </MDTypography>
+          </MDBox>
+          <MDBox mt={0.5}>
+            <Switch checked={showLogo} onChange={() => setShowLogo(!showLogo)} />
           </MDBox>
         </MDBox>
         <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
-          <MDBox mt={0.5}>
-            <Switch checked={mentionsMe} onChange={() => setMentionsMe(!mentionsMe)} />
-          </MDBox>
           <MDBox width="80%" ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">
-              Email me when someone mentions me
+              Custom title
             </MDTypography>
           </MDBox>
-        </MDBox>
-        <MDBox mt={3}>
-          <MDTypography variant="caption" fontWeight="bold" color="text" textTransform="uppercase">
-            application
-          </MDTypography>
-        </MDBox>
-        <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
-          <MDBox mt={0.5}>
-            <Switch checked={newLaunches} onChange={() => setNewLaunches(!newLaunches)} />
+          <MDBox my={0.5}>
+            <Switch checked={customTitle} onChange={() => setCustomTitle(!customTitle)} />
           </MDBox>
+        </MDBox>
+        <MDInput mb={4} variant="standard" type="email" label="checkout title..." />
+
+        <MDBox display="flex" alignItems="center" mt={3} mb={0.5} ml={-1.5}>
           <MDBox width="80%" ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">
-              New launches and projects
+              Autocomplete address
             </MDTypography>
+          </MDBox>
+          <MDBox mt={0.5}>
+            <Switch checked={autocomplete} onChange={() => setAutocomplete(!autocomplete)} />
           </MDBox>
         </MDBox>
         <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
-          <MDBox mt={0.5}>
-            <Switch checked={productUpdate} onChange={() => setProductUpdate(!productUpdate)} />
-          </MDBox>
           <MDBox width="80%" ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">
-              Monthly product updates
+              Allow use of Coupons
             </MDTypography>
+          </MDBox>
+          <MDBox mt={0.5}>
+            <Switch checked={allowCoupons} onChange={() => setAllowCoupons(!allowCoupons)} />
           </MDBox>
         </MDBox>
-        <MDBox display="flex" alignItems="center" mb={0.5} ml={-1.5}>
-          <MDBox mt={0.5}>
-            <Switch checked={newsletter} onChange={() => setNewsletter(!newsletter)} />
-          </MDBox>
-          <MDBox width="80%" ml={0.5}>
+        <MDBox ml={-1.5}>
+          <MDBox width="80%" mb={2} ml={0.5}>
             <MDTypography variant="button" fontWeight="regular" color="text">
-              Subscribe to newsletter
+              Checkout widget link:
             </MDTypography>
           </MDBox>
+          <Link ml={.5} to="#" variant="body2">https://company-test.arthera.net/checkout</Link>
+        </MDBox>
+        <MDBox mt={4} ml={-1.5}>
+          <MDButton mt={5} variant="outlined" color="info">
+            Save
+          </MDButton>
         </MDBox>
       </MDBox>
     </Card>

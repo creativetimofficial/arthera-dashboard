@@ -17,10 +17,6 @@ import { useState } from "react";
 
 // @mui material components
 import Card from "@mui/material/Card";
-import Icon from "@mui/material/Icon";
-import Menu from "@mui/material/Menu";
-import MenuItem from "@mui/material/MenuItem";
-import Divider from "@mui/material/Divider";
 
 // Material Dashboard 2 PRO React components
 import MDBox from "components/MDBox";
@@ -34,7 +30,7 @@ import Footer from "examples/Footer";
 import DataTable from "examples/Tables/DataTable";
 
 // Data
-import dataTableData from "layouts/ecommerce/orders/order-list/data/dataTableData";
+import dataProducts from "layouts/catalog/data/dataProducts";
 
 function OrderList() {
   const [menu, setMenu] = useState(null);
@@ -42,41 +38,25 @@ function OrderList() {
   const openMenu = (event) => setMenu(event.currentTarget);
   const closeMenu = () => setMenu(null);
 
-  const renderMenu = (
-    <Menu
-      anchorEl={menu}
-      anchorOrigin={{ vertical: "bottom", horizontal: "left" }}
-      transformOrigin={{ vertical: "top", horizontal: "left" }}
-      open={Boolean(menu)}
-      onClose={closeMenu}
-      keepMounted
-    >
-      <MenuItem onClick={closeMenu}>Status: Paid</MenuItem>
-      <MenuItem onClick={closeMenu}>Status: Refunded</MenuItem>
-      <MenuItem onClick={closeMenu}>Status: Canceled</MenuItem>
-      <Divider sx={{ margin: "0.5rem 0" }} />
-      <MenuItem onClick={closeMenu}>
-        <MDTypography variant="button" color="error" fontWeight="regular">
-          Remove Filter
-        </MDTypography>
-      </MenuItem>
-    </Menu>
-  );
-
   return (
     <DashboardLayout>
       <DashboardNavbar />
       <MDBox my={3}>
         <MDBox display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
-          <MDTypography variant="h3" fontWeight="medium">
-            Currencies
-          </MDTypography>
-          <MDButton variant="gradient" color="info">
-            Add Customer
+          <MDBox>
+            <MDTypography variant="h3" fontWeight="medium">
+              Products
+            </MDTypography>
+            <MDTypography variant="body2" fontWeight="light">
+              Products are a representation of what the customer is actually buying.
+            </MDTypography>
+          </MDBox>
+          <MDButton variant="outlined" color="dark">
+            Add Product
           </MDButton>
         </MDBox>
         <Card>
-          <DataTable table={dataTableData} entriesPerPage={false} canSearch />
+          <DataTable table={dataProducts} entriesPerPage={false} canSearch />
         </Card>
       </MDBox>
       <Footer />

@@ -13,7 +13,7 @@ Coded by www.creative-tim.com
 * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 */
 
-const dataTableData = {
+const SubscriptionsData = {
   columns: [
     { Header: "plan", accessor: "plan", width: "25%" },
     { Header: "name", accessor: "name", width: "20%" },
@@ -61,4 +61,4 @@ const dataTableData = {
   ],
 };
 
-export default dataTableData;
+export default SubscriptionsData;
