@@ -66,7 +66,7 @@ function Analytics() {
         <MDTypography variant="h3" fontWeight="medium">
           Welcome Flavius
         </MDTypography>
-        <MDTypography variant="p" fontWeight="normal">
+        <MDTypography variant="subtitle2" fontWeight="normal">
           Here is your overview
         </MDTypography>
         <MDBox mt={5}>
