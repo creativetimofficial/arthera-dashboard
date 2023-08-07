@@ -51,7 +51,7 @@ function OrderList() {
               Products are a representation of what the customer is actually buying.
             </MDTypography>
           </MDBox>
-          <MDButton variant="outlined" color="dark">
+          <MDButton variant="outlined" color="primary">
             Add Product
           </MDButton>
         </MDBox>
