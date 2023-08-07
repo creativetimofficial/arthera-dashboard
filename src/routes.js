@@ -59,14 +59,15 @@ import Currencies from "layouts/catalog/currencies";
 import Checkout from "layouts/catalog/checkout";
 import Products from "layouts/catalog/products";
 import Plans from "layouts/catalog/plans";
-import NewPlan from "layouts/catalog/newPlan";
+import Plan from "layouts/catalog/plan";
 import Invoices from "layouts/catalog/invoices";
 import Resellers from "layouts/catalog/resellers";
 import Calendar from "layouts/applications/calendar";
 import NewProduct from "layouts/ecommerce/products/new-product";
 import EditProduct from "layouts/ecommerce/products/edit-product";
 import ProductPage from "layouts/ecommerce/products/product-page";
-import OrderList from "layouts/ecommerce/orders/order-list";
+import Customers from "layouts/pages/customers";
+import Customer from "layouts/pages/customers/customer";
 import OrderDetails from "layouts/ecommerce/orders/order-details";
 import SignInBasic from "layouts/authentication/sign-in/basic";
 import SignInCover from "layouts/authentication/sign-in/cover";
@@ -88,7 +89,7 @@ const routes = [
     type: "collapse",
     name: "Setup Guide",
     key: "guide",
-    route: "/pages/guide",
+    route: "/guide",
     icon: <Icon fontSize="medium">receipt_long</Icon>,
     noCollapse: true,
     component: <Guide />,
@@ -106,10 +107,10 @@ const routes = [
     type: "collapse",
     name: "Customers",
     key: "customers",
-    route: "/ecommerce/orders/order-list",
+    route: "/customers",
     icon: <Icon fontSize="medium">content_paste</Icon>,
     noCollapse: true,
-    component: <OrderList />,
+    component: <Customers />,
   },
   {
     type: "collapse",
@@ -144,12 +145,6 @@ const routes = [
         key: "plans",
         route: "/catalog/plans",
         component: <Plans />
-      },
-      {
-        name: "New Plan",
-        key: "newPlan",
-        route: "/catalog/newPlan",
-        component: <NewPlan />
       },
       {
         name: "Invoice Templates",
