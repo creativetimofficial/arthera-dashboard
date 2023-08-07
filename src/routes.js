@@ -44,6 +44,8 @@ import NewUser from "layouts/pages/users/new-user";
 import Settings from "layouts/pages/account/settings";
 import Billing from "layouts/pages/account/billing";
 import Invoice from "layouts/pages/account/invoice";
+import Home from "layouts/pages/home";
+import Guide from "layouts/pages/guide";
 import Timeline from "layouts/pages/projects/timeline";
 import PricingPage from "layouts/pages/pricing-page";
 import Widgets from "layouts/pages/widgets";
@@ -57,6 +59,7 @@ import Currencies from "layouts/catalog/currencies";
 import Checkout from "layouts/catalog/checkout";
 import Products from "layouts/catalog/products";
 import Plans from "layouts/catalog/plans";
+import NewPlan from "layouts/catalog/newPlan";
 import Invoices from "layouts/catalog/invoices";
 import Resellers from "layouts/catalog/resellers";
 import Calendar from "layouts/applications/calendar";
@@ -85,10 +88,10 @@ const routes = [
     type: "collapse",
     name: "Setup Guide",
     key: "guide",
-    route: "/pages/users/new-user",
+    route: "/pages/guide",
     icon: <Icon fontSize="medium">receipt_long</Icon>,
     noCollapse: true,
-    component: <NewUser />,
+    component: <Guide />,
   },
   {
     type: "collapse",
@@ -97,7 +100,7 @@ const routes = [
     route: "/home",
     icon: <Icon fontSize="medium">apps</Icon>,
     noCollapse: true,
-    component: <Analytics />,
+    component: <Home />,
   },
   {
     type: "collapse",
@@ -141,6 +144,12 @@ const routes = [
         key: "plans",
         route: "/catalog/plans",
         component: <Plans />
+      },
+      {
+        name: "New Plan",
+        key: "newPlan",
+        route: "/catalog/newPlan",
+        component: <NewPlan />
       },
       {
         name: "Invoice Templates",
