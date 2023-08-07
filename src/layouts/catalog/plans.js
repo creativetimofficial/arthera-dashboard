@@ -52,7 +52,7 @@ function OrderList() {
               Plans specify the terms of a subscription contact.
             </MDTypography>
           </MDBox>
-          <Link href="/newPlan" variant="outlined" color="dark">
+          <Link href="/catalog/newPlan" variant="outlined" color="dark">
             <MDButton variant="outlined" color="primary">
               Add Plan
             </MDButton>
