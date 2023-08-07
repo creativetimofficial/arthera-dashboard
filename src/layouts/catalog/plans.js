@@ -59,7 +59,7 @@ function OrderList() {
           </Link>
         </MDBox>
         <Card>
-          <DataTable table={dataPlans} entriesPerPage={false} canSearch />
+          <DataTable table={dataPlans} entriesPerPage={false} showTotalEntries={false} canSearch />
         </Card>
       </MDBox>
       <Footer />
