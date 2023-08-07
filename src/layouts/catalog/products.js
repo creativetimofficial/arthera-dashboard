@@ -56,7 +56,7 @@ function OrderList() {
           </MDButton>
         </MDBox>
         <Card>
-          <DataTable table={dataProducts} entriesPerPage={false} canSearch />
+          <DataTable table={dataProducts} entriesPerPage={false} showTotalEntries={false} canSearch />
         </Card>
       </MDBox>
       <Footer />
