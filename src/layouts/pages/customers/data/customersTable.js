@@ -54,7 +54,7 @@ const dataTableCurrency = {
       company: "None",
       created: "27.07.2023",
       plans: "Basic",
-      details: <Link href="/customers/customer"><MDButton variant="text" color="primary">Details</MDButton></Link>
+      details: <Link href="/customers/customer"><MDButton variant="link" color="primary">Details</MDButton></Link>
     },
     
   ],
