@@ -45,7 +45,7 @@ const dataProducts = {
       name: "Basic",
       price: "12 $ / month",
       term: "12 months",
-      details: <MDBox display="flex"><Link href="/catalog/plan"><MDButton variant="text" color="primary">View</MDButton></Link><Link href="/catalog/plan"><MDButton variant="text" color="primary">Delete</MDButton></Link></MDBox>
+      details: <MDBox display="flex"><Link href="/catalog/plan"><MDButton variant="link" color="primary">View</MDButton></Link><Link href="#"><MDButton variant="link" color="primary">Delete</MDButton></Link></MDBox>
 
     },  
   ],
