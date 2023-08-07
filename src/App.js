@@ -40,6 +40,8 @@ import themeDarkRTL from "assets/theme-dark/theme-rtl";
 
 import Customer from "layouts/pages/customers/customer";
 import Plan from "layouts/catalog/plan";
+import NewPlan from "layouts/catalog/newPlan";
+import Product from "layouts/catalog/product";
 
 // RTL plugins
 import rtlPlugin from "stylis-plugin-rtl";
@@ -172,6 +174,8 @@ export default function App() {
           {getRoutes(routes)}
           <Route exact path="/customers/customer" element={<Customer/>} />
           <Route exact path="/catalog/plan" element={<Plan/>} />
+          <Route exact path="/catalog/newPlan" element={<NewPlan/>} />
+          <Route exact path="/catalog/product" element={<Product/>} />
           <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
       </ThemeProvider>
@@ -198,6 +202,8 @@ export default function App() {
         {getRoutes(routes)}
         <Route exact path="/customers/customer" element={<Customer/>} />
         <Route exact path="/catalog/plan" element={<Plan/>} />
+        <Route exact path="/catalog/newPlan" element={<NewPlan/>} />
+        <Route exact path="/catalog/product" element={<Product/>} />
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </ThemeProvider>
