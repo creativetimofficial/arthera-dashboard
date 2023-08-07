@@ -73,7 +73,7 @@ function OrderList() {
         </MDBox>
         <MDButton variant="outlined" color="primary" size="small">Cancel Subscription</MDButton>
 
-        <MDBox display="flex" gap={8} mt={10}>
+        <MDBox display="flex" gap={8} mt={5}>
           <MDBox width="50%">
             <MDTypography mb={3} variant="h5" fontWeight="medium">
               Customer
@@ -122,12 +122,12 @@ function OrderList() {
             </MDBox>
           </MDBox>
         </MDBox>
-        <MDBox mt={10}>
+        <MDBox mt={5}>
           <MDTypography variant="h4" mb={3}>Transactions</MDTypography>
           <DataTable table={dataTransactions} entriesPerPage={false} showTotalEntries={false} />
         </MDBox>
 
-        <MDBox mt={10}>
+        <MDBox mt={5} mb={10}>
           <MDTypography variant="h4" mb={3}>Invoices</MDTypography>
           <DataTable table={dataInvoices} entriesPerPage={false} showTotalEntries={false} />
         </MDBox>
