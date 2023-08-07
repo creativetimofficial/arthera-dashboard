@@ -46,7 +46,7 @@ function OrderList() {
           <MDTypography variant="h3" fontWeight="medium">
             Resellers
           </MDTypography>
-          <MDButton variant="gradient" color="info">
+          <MDButton variant="gradient" color="primary">
             Add Currency
           </MDButton>
         </MDBox>

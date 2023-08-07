@@ -38,6 +38,11 @@ import themeRTL from "assets/theme/theme-rtl";
 import themeDark from "assets/theme-dark";
 import themeDarkRTL from "assets/theme-dark/theme-rtl";
 
+import Customer from "layouts/pages/customers/customer";
+import Plan from "layouts/catalog/plan";
+import NewPlan from "layouts/catalog/newPlan";
+import Product from "layouts/catalog/product";
+
 // RTL plugins
 import rtlPlugin from "stylis-plugin-rtl";
 import { CacheProvider } from "@emotion/react";
@@ -50,8 +55,8 @@ import routes from "routes";
 import { useMaterialUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
 // Images
-import brandWhite from "assets/images/logos/primary_vertical_black.png";
-import brandDark from "assets/images/logos/primary_vertical_black.png";
+import brandWhite from "assets/images/logos/logo-horizontal-white.png";
+import brandDark from "assets/images/logos/logo-horizontal-dark.png";
 
 export default function App() {
   const [controller, dispatch] = useMaterialUIController();
@@ -167,7 +172,11 @@ export default function App() {
         {layout === "vr" && <Configurator />}
         <Routes>
           {getRoutes(routes)}
-          <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
+          <Route exact path="/customers/customer" element={<Customer/>} />
+          <Route exact path="/catalog/plan" element={<Plan/>} />
+          <Route exact path="/catalog/newPlan" element={<NewPlan/>} />
+          <Route exact path="/catalog/product" element={<Product/>} />
+          <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
       </ThemeProvider>
     </CacheProvider>
@@ -191,7 +200,11 @@ export default function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
+        <Route exact path="/customers/customer" element={<Customer/>} />
+        <Route exact path="/catalog/plan" element={<Plan/>} />
+        <Route exact path="/catalog/newPlan" element={<NewPlan/>} />
+        <Route exact path="/catalog/product" element={<Product/>} />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </ThemeProvider>
   );

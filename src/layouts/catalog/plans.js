@@ -17,6 +17,7 @@ import { useState } from "react";
 
 // @mui material components
 import Card from "@mui/material/Card";
+import Link from "@mui/material/Link";
 
 // Material Dashboard 2 PRO React components
 import MDBox from "components/MDBox";
@@ -51,12 +52,14 @@ function OrderList() {
               Plans specify the terms of a subscription contact.
             </MDTypography>
           </MDBox>
-          <MDButton variant="outlined" color="dark">
-            Add Plan
-          </MDButton>
+          <Link href="/catalog/newPlan" variant="outlined" color="dark">
+            <MDButton variant="outlined" color="primary">
+              Add Plan
+            </MDButton>
+          </Link>
         </MDBox>
         <Card>
-          <DataTable table={dataPlans} entriesPerPage={false} canSearch />
+          <DataTable table={dataPlans} entriesPerPage={false} showTotalEntries={false} canSearch />
         </Card>
       </MDBox>
       <Footer />

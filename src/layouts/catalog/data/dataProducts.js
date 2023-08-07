@@ -14,6 +14,8 @@ Coded by www.creative-tim.com
 */
 
 /* eslint-disable react/prop-types */
+import Link from "@mui/material/Link";
+import MDButton from "components/MDButton";
 
 const dataProducts = {
   columns: [
@@ -25,20 +27,27 @@ const dataProducts = {
       Header: "Category",
       accessor: "category",
     },
+    {
+      Header: "",
+      accessor: "details",
+    },
   ],
 
   rows: [
     {
       name: "Basic Product",
       category: "BASE",
+      details: <Link href="/catalog/product"><MDButton variant="link" color="primary">View</MDButton></Link>
     },
     {
       name: "Addon Product",
       category: "Addon for Basic Product",
+      details: <Link href="/catalog/product"><MDButton variant="link" color="primary">View</MDButton></Link>
     },
     {
       name: "Standalone Product",
       category: "STANDALONE",
+      details: <Link href="/catalog/product"><MDButton variant="link" color="primary">View</MDButton></Link>
     },
     
   ],

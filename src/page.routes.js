@@ -47,6 +47,7 @@ const pageRoutes = [
             name: "analytics",
             route: "/home",
           },
+      
         ],
       },
       {

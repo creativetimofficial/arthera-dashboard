@@ -99,14 +99,14 @@ function ProfilesList({ title, profiles, shadow }) {
             Payment method
           </MDTypography>
           <MDBox display="flex" alignItems="center">
-            <MDAvatar src={monoLogoDark} alt="something here" shadow="md" />
+            <MDAvatar src={monoLogoDark} alt="something here" />
             <MDTypography ml={1} variant="body2" fontWeight="medium" textTransform="capitalize">
               Arthera wallet
             </MDTypography>
           </MDBox>
         </MDBox>
         <MDBox mt={4} display="flex" justifyContent="center">
-          <MDButton textAlign="center" mt={5} variant="outlined" color="dark">
+          <MDButton textAlign="center" mt={5} variant="outlined" color="primary">
             Subscribe
           </MDButton>
         </MDBox>

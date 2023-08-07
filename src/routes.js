@@ -44,6 +44,8 @@ import NewUser from "layouts/pages/users/new-user";
 import Settings from "layouts/pages/account/settings";
 import Billing from "layouts/pages/account/billing";
 import Invoice from "layouts/pages/account/invoice";
+import Home from "layouts/pages/home";
+import Guide from "layouts/pages/guide";
 import Timeline from "layouts/pages/projects/timeline";
 import PricingPage from "layouts/pages/pricing-page";
 import Widgets from "layouts/pages/widgets";
@@ -57,13 +59,15 @@ import Currencies from "layouts/catalog/currencies";
 import Checkout from "layouts/catalog/checkout";
 import Products from "layouts/catalog/products";
 import Plans from "layouts/catalog/plans";
+import Plan from "layouts/catalog/plan";
 import Invoices from "layouts/catalog/invoices";
 import Resellers from "layouts/catalog/resellers";
 import Calendar from "layouts/applications/calendar";
 import NewProduct from "layouts/ecommerce/products/new-product";
 import EditProduct from "layouts/ecommerce/products/edit-product";
 import ProductPage from "layouts/ecommerce/products/product-page";
-import OrderList from "layouts/ecommerce/orders/order-list";
+import Customers from "layouts/pages/customers";
+import Customer from "layouts/pages/customers/customer";
 import OrderDetails from "layouts/ecommerce/orders/order-details";
 import SignInBasic from "layouts/authentication/sign-in/basic";
 import SignInCover from "layouts/authentication/sign-in/cover";
@@ -85,10 +89,10 @@ const routes = [
     type: "collapse",
     name: "Setup Guide",
     key: "guide",
-    route: "/pages/users/new-user",
+    route: "/guide",
     icon: <Icon fontSize="medium">receipt_long</Icon>,
     noCollapse: true,
-    component: <NewUser />,
+    component: <Guide />,
   },
   {
     type: "collapse",
@@ -97,16 +101,16 @@ const routes = [
     route: "/home",
     icon: <Icon fontSize="medium">apps</Icon>,
     noCollapse: true,
-    component: <Analytics />,
+    component: <Home />,
   },
   {
     type: "collapse",
     name: "Customers",
     key: "customers",
-    route: "/ecommerce/orders/order-list",
+    route: "/customers",
     icon: <Icon fontSize="medium">content_paste</Icon>,
     noCollapse: true,
-    component: <OrderList />,
+    component: <Customers />,
   },
   {
     type: "collapse",

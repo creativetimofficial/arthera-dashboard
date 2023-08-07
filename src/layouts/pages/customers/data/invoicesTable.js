@@ -14,41 +14,37 @@ Coded by www.creative-tim.com
 */
 
 /* eslint-disable react/prop-types */
-import Link from "@mui/material/Link";
+// ProductsList page components
 
-import MDBox from "components/MDBox";
-
-import MDButton from "components/MDButton";
-
-const dataProducts = {
+const dataTableInvoices = {
   columns: [
     {
-      Header: "Name",
-      accessor: "name",
+      Header: "ID",
+      accessor: "id",
     },
     {
-      Header: "Price",
-      accessor: "price",
+      Header: "Created On",
+      accessor: "createdOn",
     },
     {
-      Header: "Term",
-      accessor: "term",
+      Header: "Status",
+      accessor: "status",
     },
     {
-      Header: "",
-      accessor: "details",
+      Header: "Amount",
+      accessor: "amount",
     },
   ],
 
   rows: [
     {
-      name: "Basic",
-      price: "12 $ / month",
-      term: "12 months",
-      details: <MDBox display="flex"><Link href="/catalog/plan"><MDButton variant="link" color="primary">View</MDButton></Link><Link href="#"><MDButton variant="link" color="primary">Delete</MDButton></Link></MDBox>
-
-    },  
+      id: "d981abbb-3622-487-9564-d594c9d04f83",
+      createdOn: "27 Jul 2023 10:30",
+      status: "PAID",
+      amount: "100 AA",
+    },
+    
   ],
 };
 
-export default dataProducts;
+export default dataTableInvoices;

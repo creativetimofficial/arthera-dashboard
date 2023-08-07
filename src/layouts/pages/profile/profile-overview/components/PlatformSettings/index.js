@@ -97,7 +97,7 @@ function PlatformSettings() {
           <Link ml={.5} to="#" variant="body2">https://company-test.arthera.net/checkout</Link>
         </MDBox>
         <MDBox mt={4} ml={-1.5}>
-          <MDButton mt={5} variant="outlined" color="info">
+          <MDButton mt={5} variant="outlined" color="primary">
             Save
           </MDButton>
         </MDBox>

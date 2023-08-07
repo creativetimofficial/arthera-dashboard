@@ -14,41 +14,42 @@ Coded by www.creative-tim.com
 */
 
 /* eslint-disable react/prop-types */
-import Link from "@mui/material/Link";
+// ProductsList page components
 
-import MDBox from "components/MDBox";
-
-import MDButton from "components/MDButton";
-
-const dataProducts = {
+const dataTableTransactions = {
   columns: [
     {
-      Header: "Name",
-      accessor: "name",
+      Header: "ID",
+      accessor: "id",
     },
     {
-      Header: "Price",
-      accessor: "price",
+      Header: "Occured ON",
+      accessor: "occuredOn",
     },
     {
-      Header: "Term",
-      accessor: "term",
+      Header: "Status",
+      accessor: "status",
     },
     {
-      Header: "",
-      accessor: "details",
+      Header: "Payment Method",
+      accessor: "paymentMethod",
+    },
+    {
+      Header: "Amount",
+      accessor: "amount",
     },
   ],
 
   rows: [
     {
-      name: "Basic",
-      price: "12 $ / month",
-      term: "12 months",
-      details: <MDBox display="flex"><Link href="/catalog/plan"><MDButton variant="link" color="primary">View</MDButton></Link><Link href="#"><MDButton variant="link" color="primary">Delete</MDButton></Link></MDBox>
-
-    },  
+      id: "be9dceca-9c5d-4038-818c-57e6fccfbe92",
+      occuredOn: "27 Jul 2023 10:30",
+      status: "SUCCESS",
+      paymentMethod: "Arthera wallet",
+      amount: "100 AA",
+    },
+    
   ],
 };
 
-export default dataProducts;
+export default dataTableTransactions;
