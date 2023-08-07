@@ -38,6 +38,9 @@ import themeRTL from "assets/theme/theme-rtl";
 import themeDark from "assets/theme-dark";
 import themeDarkRTL from "assets/theme-dark/theme-rtl";
 
+import Customer from "layouts/pages/customers/customer";
+import Plan from "layouts/catalog/plan";
+
 // RTL plugins
 import rtlPlugin from "stylis-plugin-rtl";
 import { CacheProvider } from "@emotion/react";
@@ -167,7 +170,9 @@ export default function App() {
         {layout === "vr" && <Configurator />}
         <Routes>
           {getRoutes(routes)}
-          <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
+          <Route exact path="/customers/customer" element={<Customer/>} />
+          <Route exact path="/catalog/plan" element={<Plan/>} />
+          <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
       </ThemeProvider>
     </CacheProvider>
@@ -191,7 +196,9 @@ export default function App() {
       {layout === "vr" && <Configurator />}
       <Routes>
         {getRoutes(routes)}
-        <Route path="*" element={<Navigate to="/dashboards/analytics" />} />
+        <Route exact path="/customers/customer" element={<Customer/>} />
+        <Route exact path="/catalog/plan" element={<Plan/>} />
+        <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </ThemeProvider>
   );
