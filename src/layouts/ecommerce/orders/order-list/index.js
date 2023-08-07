@@ -69,7 +69,7 @@ function OrderList() {
       <MDBox my={3}>
         <MDBox display="flex" justifyContent="space-between" alignItems="flex-start" mb={2}>
           <MDTypography variant="h3" fontWeight="medium">
-            Currencies
+            Customers
           </MDTypography>
           <MDButton variant="gradient" color="info">
             Add Customer
