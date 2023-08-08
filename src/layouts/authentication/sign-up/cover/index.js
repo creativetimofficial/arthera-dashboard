@@ -38,9 +38,9 @@ function Cover() {
       <Card>
         <MDBox
           variant="gradient"
-          bgColor="info"
+          bgColor="primary"
           borderRadius="lg"
-          coloredShadow="success"
+          coloredShadow="primary"
           mx={2}
           mt={-3}
           p={3}
@@ -57,13 +57,23 @@ function Cover() {
         <MDBox pt={4} pb={3} px={3}>
           <MDBox component="form" role="form">
             <MDBox mb={2}>
-              <MDInput type="text" label="Name" variant="standard" fullWidth />
-            </MDBox>
-            <MDBox mb={2}>
               <MDInput type="email" label="Email" variant="standard" fullWidth />
             </MDBox>
-            <MDBox mb={2}>
-              <MDInput type="password" label="Password" variant="standard" fullWidth />
+            <MDBox display="flex" alignItems="center" gap={4}>
+              <MDBox mb={2}>
+                <MDInput type="password" label="Password" variant="standard" fullWidth />
+              </MDBox>
+              <MDBox mb={2}>
+                <MDInput type="password" label="Confirm Password" variant="standard" fullWidth />
+              </MDBox>
+            </MDBox>
+            <MDBox display="flex" alignItems="center" gap={4}>
+              <MDBox mb={2}>
+                <MDInput type="text" label="First Name" variant="standard" fullWidth />
+              </MDBox>
+              <MDBox mb={2}>
+                <MDInput type="text" label="Last Name" variant="standard" fullWidth />
+              </MDBox>
             </MDBox>
             <MDBox display="flex" alignItems="center" ml={-1}>
               <Checkbox />
@@ -73,21 +83,11 @@ function Cover() {
                 color="text"
                 sx={{ cursor: "pointer", userSelect: "none", ml: -1 }}
               >
-                &nbsp;&nbsp;I agree the&nbsp;
-              </MDTypography>
-              <MDTypography
-                component="a"
-                href="#"
-                variant="button"
-                fontWeight="bold"
-                color="info"
-                textGradient
-              >
-                Terms and Conditions
+                &nbsp;&nbsp;I'm not a robot&nbsp;
               </MDTypography>
             </MDBox>
             <MDBox mt={4} mb={1}>
-              <MDButton variant="gradient" color="info" fullWidth>
+              <MDButton variant="gradient" color="primary" fullWidth>
                 sign in
               </MDButton>
             </MDBox>
@@ -98,7 +98,7 @@ function Cover() {
                   component={Link}
                   to="/authentication/sign-in/cover"
                   variant="button"
-                  color="info"
+                  color="primary"
                   fontWeight="medium"
                   textGradient
                 >
