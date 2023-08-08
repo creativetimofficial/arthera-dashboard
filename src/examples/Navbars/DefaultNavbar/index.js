@@ -550,7 +550,7 @@ function DefaultNavbar({ routes, brand, transparent, light, action }) {
                   target="_blank"
                   rel="noreferrer"
                   variant="gradient"
-                  color={action.color ? action.color : "info"}
+                  color={action.color ? action.color : "primary"}
                   size="small"
                   sx={{ mt: -0.3 }}
                 >
@@ -587,7 +587,7 @@ function DefaultNavbar({ routes, brand, transparent, light, action }) {
 
 // Declaring default props for DefaultNavbar
 DefaultNavbar.defaultProps = {
-  brand: "Material Dashboard PRO",
+  brand: "Arthera Dashboard",
   transparent: false,
   light: false,
   action: false,

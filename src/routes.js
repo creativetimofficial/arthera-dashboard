@@ -66,6 +66,7 @@ import Calendar from "layouts/applications/calendar";
 import NewProduct from "layouts/ecommerce/products/new-product";
 import EditProduct from "layouts/ecommerce/products/edit-product";
 import ProductPage from "layouts/ecommerce/products/product-page";
+import Account from "layouts/pages/account";
 import Customers from "layouts/pages/customers";
 import Customer from "layouts/pages/customers/customer";
 import OrderDetails from "layouts/ecommerce/orders/order-details";
@@ -171,9 +172,10 @@ const routes = [
     type: "collapse",
     name: "Account",
     key: "account",
-    href: "/account",
+    route: "/pages/account",
     icon: <Icon fontSize="medium">upcoming</Icon>,
     noCollapse: true,
+    component: <Account />,
   },
 ];
 

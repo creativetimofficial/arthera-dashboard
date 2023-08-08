@@ -42,6 +42,9 @@ import Customer from "layouts/pages/customers/customer";
 import Plan from "layouts/catalog/plan";
 import NewPlan from "layouts/catalog/newPlan";
 import Product from "layouts/catalog/product";
+import Account from "layouts/pages/account";
+import SignIn from "layouts/authentication/sign-in/cover";
+import SignUp from "layouts/authentication/sign-up/cover";
 
 // RTL plugins
 import rtlPlugin from "stylis-plugin-rtl";
@@ -176,6 +179,7 @@ export default function App() {
           <Route exact path="/catalog/plan" element={<Plan/>} />
           <Route exact path="/catalog/newPlan" element={<NewPlan/>} />
           <Route exact path="/catalog/product" element={<Product/>} />
+          <Route exact path="/pages/account" element={<Account/>} />
           <Route path="*" element={<Navigate to="/home" />} />
         </Routes>
       </ThemeProvider>
@@ -204,6 +208,9 @@ export default function App() {
         <Route exact path="/catalog/plan" element={<Plan/>} />
         <Route exact path="/catalog/newPlan" element={<NewPlan/>} />
         <Route exact path="/catalog/product" element={<Product/>} />
+        <Route exact path="/pages/account" element={<Account/>} />
+        <Route exact path="/authentication/sign-in/cover" element={<SignIn/>} />
+        <Route exact path="/authentication/sign-up/cover" element={<SignUp/>} />
         <Route path="*" element={<Navigate to="/home" />} />
       </Routes>
     </ThemeProvider>
