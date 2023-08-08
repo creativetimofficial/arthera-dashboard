@@ -44,7 +44,7 @@ function Cover() {
       <Card>
         <MDBox
           variant="gradient"
-          bgColor="info"
+          bgColor="primary"
           borderRadius="lg"
           coloredShadow="success"
           mx={2}
@@ -95,7 +95,7 @@ function Cover() {
               </MDTypography>
             </MDBox>
             <MDBox mt={4} mb={1}>
-              <MDButton variant="gradient" color="info" fullWidth>
+              <MDButton variant="gradient" color="primary" fullWidth>
                 sign in
               </MDButton>
             </MDBox>
@@ -106,7 +106,7 @@ function Cover() {
                   component={Link}
                   to="/authentication/sign-up/cover"
                   variant="button"
-                  color="info"
+                  color="primary"
                   fontWeight="medium"
                   textGradient
                 >
